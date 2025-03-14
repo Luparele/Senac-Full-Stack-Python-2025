@@ -47,7 +47,7 @@ if (nivel_acesso === 3) {
 // Conversão de Temperatura Declare uma variável celsius com um valor de temperatura em graus Celsius. 
 // Converta a temperatura para Fahrenheit usando a fórmula: F = (C * 9/5) + 32. Imprima o resultado.
     
-let celsius = float(input("Didite a temperatura em C°:"))
+let celsius = parseFloat(input("Didite a temperatura em C°:"))
 let fahrenheit = ((celsius * 9/5) + 32)
 console.log("O valor em fahrenheit é:", fahrenheit)
 
