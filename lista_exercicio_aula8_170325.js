@@ -75,51 +75,59 @@ rl.question("Digite a primeira nota: ", (nota1) => {
 // Use um loop (for ou while) para calcular a soma de todos os números pares nesse intervalo e exiba o resultado.
 
 // usando FOR
-let num1 = parseInt(prompt("Digite o primeiro número:"));
-let num2 = parseInt(prompt("Digite o segundo número:"));
-let soma = 0;
-for (let i = num1; i <= num2; i++) {
-    if (i % 2 === 0) {
-        soma += i;
+function calcularSomaNumerosPares() {
+    let num1 = parseInt(prompt("Digite o primeiro número:"));
+    let num2 = parseInt(prompt("Digite o segundo número:"));
+    let soma = 0;
+    for (let i = num1; i <= num2; i++) {
+      if (i % 2 === 0) {
+         soma += i;
+        }
     }
+    console.log("A soma dos números pares entre", num1, "e", num2, "é", soma);
 }
-console.log("A soma dos números pares entre", num1, "e", num2, "é", soma);
+
 
 // usando WHILE
-let num3 = parseInt(prompt("Digite o primeiro número:"));
-let num4 = parseInt(prompt("Digite o segundo número:"));
-let soma1 = 0;
-let i = num3;
-while (i <= num4) {
-    if (i % 2 === 0) {
-        soma1 += i;
+function calcularSomaNumerosPares() {
+    let num3 = parseInt(prompt("Digite o primeiro número:"));
+    let num4 = parseInt(prompt("Digite o segundo número:"));
+    let soma1 = 0;
+    let i = num3;
+    while (i <= num4) {
+        if (i % 2 === 0) {
+            soma1 += i;
+        }
+        i++;
     }
-    i++;
+    console.log("A soma dos números pares entre", num3, "e", num4, "é", soma1);
 }
-console.log("A soma dos números pares entre", num3, "e", num4, "é", soma1);
 
 
 // 3 - Verificação de Palíndromo: Peça ao usuário uma palavra ou frase. 
 // Verifique se a entrada é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente, ignorando espaços e maiúsculas/minúsculas). 
 // Exiba "É palíndromo" ou "Não é palíndromo".
 
-let palavra = prompt("Digite uma palavra ou frase:");
-let palavraInvertida = palavra.split("").reverse().join("");
-if (palavra.toLowerCase() === palavraInvertida.toLowerCase()) {
-    console.log("É palíndromo");
-} else {
-    console.log("Não é palíndromo");
+function verificarPalindromo() {
+    let palavra = prompt("Digite uma palavra ou frase:");
+    let palavraInvertida = palavra.split("").reverse().join("");
+    if (palavra.toLowerCase() === palavraInvertida.toLowerCase()) {
+        console.log("É palíndromo");
+    } else {
+        console.log("Não é palíndromo");
+    }
 }
-
 
 // 4 - Cálculo de Juros Simples: Peça ao usuário o valor principal (P), a taxa de juros anual (r) e o tempo em anos (t). 
 // Calcule o montante final usando a fórmula de juros simples M=P×(1+r×t) e exiba o resultado.
 
-let principal = parseFloat(prompt("Digite o valor principal:"));
-let taxa = parseFloat(prompt("Digite a taxa de juros anual:"));
-let tempo = parseFloat(prompt("Digite o tempo em anos:"));
-let montante = principal * (1 + taxa * tempo);
-console.log("O montante final é: ", montante);
+function calcularJurosSimples() {
+    let principal = parseFloat(prompt("Digite o valor principal:"));
+    let taxa = parseFloat(prompt("Digite a taxa de juros anual:"));
+    let tempo = parseFloat(prompt("Digite o tempo em anos:"));
+    let montante = principal * (1 + taxa * tempo);
+    console.log("O montante final é: ", montante);
+}
 
 // usando const readline
 const readline = require('readline');
@@ -141,6 +149,8 @@ rl.question("Digite o valor principal: ", (principal) => {
 
 // 5 - Contagem de Dígitos: Peça ao usuário um número inteiro positivo. Conte quantos dígitos esse número possui e exiba o resultado.
 
-let num5 = parseInt(prompt("Digite um número inteiro positivo:"));
-let quantdig = num5.toString().length;
-console.log("O número possui", quantdig, "dígitos");
+function contarDigitos() {
+    let num5 = parseInt(prompt("Digite um número inteiro positivo:"));
+    let quantdig = num5.toString().length;
+    console.log("O número possui", quantdig, "dígitos");
+}
