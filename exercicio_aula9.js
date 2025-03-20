@@ -25,7 +25,11 @@ exercicio2()
 
 function exercicio3(){
     let listaDup = ["z", "t", "a", "c", "t", "z"]
+    // new Set(listaDup): Cria um novo objeto Set a partir do array listaDup. 
+    // Um Set é uma coleção de valores únicos, ou seja, remove automaticamente os elementos duplicados.
     let listaNum = [... new Set (listaDup)];
+    //[... ]: O operador spread (...) é usado para converter o Set de volta em um array.
+    //O resultado é que listaNum será um novo array contendo apenas os elementos únicos de listaDup.
     console.log(listaNum);
 }
 exercicio3()
