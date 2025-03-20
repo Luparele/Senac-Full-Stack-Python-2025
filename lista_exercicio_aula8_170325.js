@@ -86,7 +86,7 @@ function calcularSomaNumerosPares() {
     }
     console.log("A soma dos números pares entre", num1, "e", num2, "é", soma);
 }
-
+calcularSomaNumerosPares()
 
 // usando WHILE
 function calcularSomaNumerosPares() {
@@ -102,14 +102,14 @@ function calcularSomaNumerosPares() {
     }
     console.log("A soma dos números pares entre", num3, "e", num4, "é", soma1);
 }
-
+calcularSomaNumerosPares()
 
 // 3 - Verificação de Palíndromo: Peça ao usuário uma palavra ou frase. 
 // Verifique se a entrada é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente, ignorando espaços e maiúsculas/minúsculas). 
 // Exiba "É palíndromo" ou "Não é palíndromo".
 
 function verificarPalindromo() {
-    let palavra = prompt("Digite uma palavra ou frase:");
+    let palavra = prompt("Digite uma palavra ou frase:").replace(/ /g, "");
     let palavraInvertida = palavra.split("").reverse().join("");
     if (palavra.toLowerCase() === palavraInvertida.toLowerCase()) {
         console.log("É palíndromo");
@@ -117,6 +117,7 @@ function verificarPalindromo() {
         console.log("Não é palíndromo");
     }
 }
+verificarPalindromo()
 
 // 4 - Cálculo de Juros Simples: Peça ao usuário o valor principal (P), a taxa de juros anual (r) e o tempo em anos (t). 
 // Calcule o montante final usando a fórmula de juros simples M=P×(1+r×t) e exiba o resultado.
@@ -128,6 +129,7 @@ function calcularJurosSimples() {
     let montante = principal * (1 + taxa * tempo);
     console.log("O montante final é: ", montante);
 }
+calcularJurosSimples()
 
 // usando const readline
 const readline = require('readline');
@@ -154,3 +156,4 @@ function contarDigitos() {
     let quantdig = num5.toString().length;
     console.log("O número possui", quantdig, "dígitos");
 }
+contarDigitos()
