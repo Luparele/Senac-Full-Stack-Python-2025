@@ -30,6 +30,7 @@ function exercicio3(){
     let listaNum = [... new Set (listaDup)];
     //[... ]: O operador spread (...) é usado para converter o Set de volta em um array.
     //O resultado é que listaNum será um novo array contendo apenas os elementos únicos de listaDup.
-    console.log(listaNum);
+    console.log("lista com repetidos: ",listaDup);
+    console.log("lista sem repetidos: ",listaNum);
 }
 exercicio3()
