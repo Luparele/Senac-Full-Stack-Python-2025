@@ -22,3 +22,10 @@ exercicio2()
 
 
 // 3: Crie uma função que recebe um array e retorna um novo array sem elementos duplicados.
+
+function exercicio3(){
+    let listaDup = ["z", "t", "a", "c", "t", "z"]
+    let listaNum = [... new Set (listaDup)];
+    console.log(listaNum);
+}
+exercicio3()
